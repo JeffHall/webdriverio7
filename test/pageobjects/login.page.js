@@ -18,6 +18,14 @@ class LoginPage extends Page {
         return $('#onetrust-button-group #onetrust-accept-btn-handler');
     }
 
+    get oneTrustModalCloseButton() {
+        return $('.pc-close-btn-container #close-pc-btn-handler');
+    }
+    
+    get oneTrustModalTitle() {
+        return $('.pc-title-container #pc-title');
+    }
+
     async login(username, password) {
         await this.inputUsername.setValue(username);
         await this.inputPassword.setValue(password);
